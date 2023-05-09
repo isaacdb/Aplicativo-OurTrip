@@ -10,7 +10,7 @@ export default function Header() {
           showHideTransition={'none'}
           hidden={false}/>
           
-        <Text style={styles.title}>EXPLORAR</Text>
+        <Text style={styles.title}>EXPLORAR!</Text>
         <Text style={styles.subtitle}>Roteiros em destaque</Text>
       </View>
     );

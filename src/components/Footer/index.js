@@ -1,7 +1,7 @@
 import { View, StyleSheet, Text,  } from "react-native";
 import { Feather } from '@expo/vector-icons'
 
-export function Footer() {
+export default function Footer() {
   return (
     <View style={styles.container}>
       <Feather name="search" size={32} color="black" />

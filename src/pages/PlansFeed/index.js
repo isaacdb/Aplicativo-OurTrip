@@ -1,14 +1,14 @@
 import { Text, View, StyleSheet, FlatList } from "react-native";
-import { PlanCard } from "../../components/PlanCard";
+import PlanCard  from "../../components/PlanCard";
 import { useState } from "react";
+import Footer from "../../components/Footer";
 
 const listaPlansAux = [
   {id: '1', value: 'Teste 1'},
   {id: '2', value: 'Teste 2'}
 ]
 
-
-export function PlansFeed() {
+export default function PlansFeed({ navigation }) {
   const [listPlans, setListPlans] = useState(listaPlansAux);
 
   return (
@@ -27,6 +27,7 @@ export function PlansFeed() {
                   )
                 }
                 />
+                      <Footer/>
     </View>
   );
 }

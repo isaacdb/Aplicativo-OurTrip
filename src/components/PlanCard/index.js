@@ -1,14 +1,18 @@
-import { StyleSheet, View, Text, ImageBackground } from "react-native";
+import { StyleSheet, View, Text, ImageBackground, TouchableOpacity } from "react-native";
 import { Feather } from '@expo/vector-icons'
 
 const image = {uri: 'https://reactjs.org/logo-og.png'};
 
-export function PlanCard() {
+export default function PlanCard({ navigation }) {
   return (
-    <View style={styles.container}>      
-      <ImageBackground borderTopLeftRadius={10} borderTopRightRadius={10} source={image} resizeMode="cover" style={styles.image}/>
+    <View style={styles.container}>
+      <TouchableOpacity onPress={() => navigation.navigate('PlanView')}>
+        <ImageBackground borderTopLeftRadius={10} borderTopRightRadius={10} source={image} resizeMode="cover" style={styles.image}/>
+      </TouchableOpacity>     
       <View style={styles.infoContainer}>
-        <Text style={styles.title}>Rio de Janeiro</Text>
+        <TouchableOpacity>
+          <Text style={styles.title}>Rio de Janeiro</Text>
+        </TouchableOpacity>
         <Text style={styles.subtitle}>2 Dias</Text>
         <View style={styles.iconsContainer}>
           <View style={styles.iconContent}>
