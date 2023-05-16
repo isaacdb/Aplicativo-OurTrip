@@ -1,9 +1,10 @@
 import { Text, View, StyleSheet } from "react-native";
 
-export default function PlanView() {
+export default function PlanView({route, navigation}) {
+  const { data } = route.params;
   return (
     <View style={styles.container}>
-        <Text>TROCOU DE TELA</Text>
+        <Text>TELA VIAGEM PARA {data.nome}</Text>
     </View>
   );
 }
